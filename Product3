@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Name - Product 2</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+           <a href="index.html" class="logo-link">
+                <img src="images/store_logo.png" alt="Store Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="terms.html">Terms & Conditions</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="site-main">
+        <div class="container">
+            <div class="product-detail">
+                <div class="product-images">
+                   <div class="main-image">
+                    <img src="images/product2.jpg" alt="Product 2" class="product-detail-image">
+                    </div>
+                     <div class="thumbnails">
+                        <img src="images/product1_thumb1.jpg" alt="Product 2 Thumb 1" class="product-thumb active">
+                        <img src="images/product1_thumb2.jpg" alt="Product 2 Thumb 2" class="product-thumb">
+                        <img src="images/product1_thumb3.jpg" alt="Product 2 Thumb 3" class="product-thumb">
+                    </div>
+                </div>
+                <div class="product-detail-info">
+                    <h2></h2>
+                    <p class="product-price">$39.99</p>
+                    <p class="product-description">
+                        This is a detailed description of the product. It includes features, specifications, materials, and benefits. Include every aspect of the product that a user would want to know before buying.
+                    </p>
+                    <div class="product-options">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1">
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-details">
+                        <h3>Product Details</h3>
+                         <ul>
+                             <li><strong>Material:</strong> High Quality Material</li>
+                            <li><strong>Weight:</strong> 1.5 kg</li>
+                            <li><strong>Dimensions:</strong> 12 x 12 x 6 cm</li>
+                            <li><strong>Warranty:</strong> 1 Year</li>
+                        </ul>
+                   </div>
+                 </div>
+            </div>
+
+                <section class="customer-reviews">
+                  <h2>Customer Reviews</h2>
+                   <div class="review-grid">
+                       <div class="review-item">
+                        <div class="review-header">
+                           <p class="review-author">NAME</p>
+                            <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                         </div>
+                         <p> This product is amazing, it is better than the photos! </p>
+                      </div>
+                        <div class="review-item">
+                         <div class="review-header">
+                           <p class="review-author">NAME</p>
+                            <div class="star-rating">⭐⭐⭐⭐</div>
+                         </div>
+                         <p>The product is great and works as expected, but shipping was a little late </p>
+                      </div>
+                        <div class="review-item">
+                             <div class="review-header">
+                                <p class="review-author">NAME</p>
+                               <div class="star-rating">⭐⭐⭐⭐⭐</div>
+                             </div>
+                             <p>The product exceeded all my expectations, will buy more from this store! </p>
+                      </div>
+                  </div>
+                   <a href="#" class="button">See All Reviews</a>
+                 </section>
+              <section class="related-products">
+                 <h2>Related Products</h2>
+                   <div class="product-carousel">
+                        <div class="product-card">
+                            <a href="product1.html">
+                                <img src="images/product1.jpg" alt="Product 1" class="product-image">
+                                <h3 class="product-name">Product 1 Name</h3>
+                                <p class="product-price">$49.99</p>
+                           </a>
+                       </div>
+                        <div class="product-card">
+                            <a href="product3.html">
+                                 <img src="images/product3.jpg" alt="Product 3" class="product-image">
+                                <h3 class="product-name">Product 3 Name</h3>
+                                <p class="product-price">$29.99</p>
+                            </a>
+                        </div>
+                           <div class="product-card">
+                             <a href="product4.html">
+                                 <img src="images/product4.jpg" alt="Product 4" class="product-image">
+                                 <h3 class="product-name">Product 4 Name</h3>
+                                <p class="product-price">$79.99</p>
+                           </a>
+                     </div>
+                    <div class="product-card">
+                            <a href="product5.html">
+                                 <img src="images/product5.jpg" alt="Product 5" class="product-image">
+                                 <h3 class="product-name">Product 5 Name</h3>
+                                 <p class="product-price">$19.99</p>
+                           </a>
+                     </div>
+                    </div>
+           </section>
+       </div>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>© 2025 Store Name. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    
+    <script>
+        const thumbnails = document.querySelectorAll('.product-thumb');
+        const mainImage = document.querySelector('.product-detail-image');
+        thumbnails.forEach(thumb => {
+            thumb.addEventListener('click', function() {
+                thumbnails.forEach(t => t.classList.remove('active'));
+                this.classList.add('active');
+                mainImage.src = this.src.replace('_thumb', '');
+            });
+        });
+    </script>
+</body>
+</html>
